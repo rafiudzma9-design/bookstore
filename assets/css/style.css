@@ -1,0 +1,48 @@
+:root {
+    --navy: #0a1f44;
+    --navy-light: #13306b;
+}
+
+body { background: #f8f9fb; }
+
+.bg-navy { background: var(--navy); }
+.text-navy { color: var(--navy); }
+
+.btn-navy { background: var(--navy); color: #fff; border: 0; }
+.btn-navy:hover { background: var(--navy-light); color: #fff; }
+
+/* Cover buku: ukuran seragam walau gambar berbeda-beda */
+.book-cover {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    background: #e9ecef;
+    .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    }
+    /* ===== Admin ===== */
+.admin-sidebar { width: 100%; }
+
+@media (min-width: 992px) {
+    .admin-sidebar {
+        width: 250px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+.admin-sidebar .nav-link {
+    color: rgba(255, 255, 255, .75);
+    border-radius: .375rem;
+}
+.admin-sidebar .nav-link:hover { background: rgba(255, 255, 255, .08); color: #fff; }
+.admin-sidebar .nav-link.active { background: var(--navy-light); color: #fff; }
+
+.admin-main { min-width: 0; }
+}
+.hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+}
